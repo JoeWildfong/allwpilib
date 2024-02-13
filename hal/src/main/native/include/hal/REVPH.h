@@ -144,7 +144,7 @@ HAL_Bool HAL_GetREVPHCompressor(HAL_REVPHHandle handle, int32_t* status);
  * @param[out] status Error status variable. 0 on success.
  */
 void HAL_SetREVPHCompressorConfig(HAL_REVPHHandle handle,
-                                  const HAL_REVPHCompressorConfig* config,
+                                  const struct HAL_REVPHCompressorConfig* config,
                                   int32_t* status);
 
 /**
@@ -303,7 +303,7 @@ double HAL_GetREVPHSolenoidVoltage(HAL_REVPHHandle handle, int32_t* status);
  * @param[out] version The hardware and firmware versions.
  * @param[out] status Error status variable. 0 on success.
  */
-void HAL_GetREVPHVersion(HAL_REVPHHandle handle, HAL_REVPHVersion* version,
+void HAL_GetREVPHVersion(HAL_REVPHHandle handle, struct HAL_REVPHVersion* version,
                          int32_t* status);
 
 /**
@@ -344,7 +344,7 @@ void HAL_FireREVPHOneShot(HAL_REVPHHandle handle, int32_t index, int32_t durMs,
  * @param[out] faults The faults.
  * @param[out] status Error status variable. 0 on success.
  */
-void HAL_GetREVPHFaults(HAL_REVPHHandle handle, HAL_REVPHFaults* faults,
+void HAL_GetREVPHFaults(HAL_REVPHHandle handle, struct HAL_REVPHFaults* faults,
                         int32_t* status);
 
 /**
@@ -355,7 +355,7 @@ void HAL_GetREVPHFaults(HAL_REVPHHandle handle, HAL_REVPHFaults* faults,
  * @param[out] status Error status variable. 0 on success.
  */
 void HAL_GetREVPHStickyFaults(HAL_REVPHHandle handle,
-                              HAL_REVPHStickyFaults* stickyFaults,
+                              struct HAL_REVPHStickyFaults* stickyFaults,
                               int32_t* status);
 
 /**
